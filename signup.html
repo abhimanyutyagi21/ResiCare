@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Create your account — ResiCare</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>
+  (function () {
+    var pref = localStorage.getItem('resicare_theme') || 'light';
+    var dark = pref === 'dark' || (pref === 'system' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+  })();
+</script>
+</head>
+<body>
+<div class="auth-grid">
+    <div class="auth-side">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <a href="index.html" style="display:flex;align-items:center;gap:8px;text-decoration:none;"><div class="brand-mark" style="background:rgba(255,255,255,0.15);">R</div><span class="font-display font-extrabold text-lg" style="color:#fff;">ResiCare</span></a>
+      </div>
+      <div>
+        <h2 class="font-display" style="font-size:1.875rem;font-weight:700;color:#fff;max-width:22rem;">Report an issue. Track the repair. Stay updated.</h2>
+        <p style="color:rgba(255,255,255,0.7);margin-top:0.75rem;max-width:22rem;font-size:0.875rem;">One place for residents, admins and workers to manage everyday society maintenance.</p>
+      </div>
+      <p style="color:rgba(255,255,255,0.5);font-size:0.75rem;">&copy; 2026 ResiCare</p>
+    </div>
+    <div class="auth-form-col">
+      <div class="auth-form-wrap anim-page">
+        <div class="lg-hidden" style="display:flex;align-items:center;gap:8px;margin-bottom:2rem;">
+          <a href="index.html" style="display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit;"><div class="brand-mark">R</div><span class="font-display font-extrabold text-lg">ResiCare</span></a>
+        </div>
+        <h1 class="font-display" style="font-size:1.5rem;font-weight:700;">Create your account</h1>
+        <p style="font-size:0.875rem;margin-top:0.4rem;margin-bottom:1.5rem;color:var(--text-secondary);">Join ResiCare to get started.</p>
+        <form id="signup-form">
+    <div style="margin-bottom:1rem;">
+    <label style="display:block;font-size:0.875rem;font-weight:500;margin-bottom:0.4rem;">Full Name</label>
+    <input class="input" style="width:100%;padding:0.65rem 0.9rem;border-radius:0.65rem;border:1px solid var(--border);background:var(--card);color:var(--text-primary);font-size:0.875rem;outline:none;" id="su-name" placeholder="e.g. Ananya Verma">
+    
+    <p id="err-su-name" class="field-error" style="font-size:0.75rem;margin-top:0.3rem;color:var(--error);display:none;"></p>
+  </div>
+    <div style="margin-bottom:1rem;">
+    <label style="display:block;font-size:0.875rem;font-weight:500;margin-bottom:0.4rem;">Email</label>
+    <input class="input" style="width:100%;padding:0.65rem 0.9rem;border-radius:0.65rem;border:1px solid var(--border);background:var(--card);color:var(--text-primary);font-size:0.875rem;outline:none;" type="email" id="su-email" placeholder="Enter your email">
+    
+    <p id="err-su-email" class="field-error" style="font-size:0.75rem;margin-top:0.3rem;color:var(--error);display:none;"></p>
+  </div>
+    <div style="margin-bottom:1rem;">
+    <label style="display:block;font-size:0.875rem;font-weight:500;margin-bottom:0.4rem;">Phone Number</label>
+    <input class="input" style="width:100%;padding:0.65rem 0.9rem;border-radius:0.65rem;border:1px solid var(--border);background:var(--card);color:var(--text-primary);font-size:0.875rem;outline:none;" id="su-phone" placeholder="10-digit phone number">
+    
+    <p id="err-su-phone" class="field-error" style="font-size:0.75rem;margin-top:0.3rem;color:var(--error);display:none;"></p>
+  </div>
+    <div style="margin-bottom:1rem;">
+    <label style="display:block;font-size:0.875rem;font-weight:500;margin-bottom:0.4rem;">Role</label>
+    <select class="input" style="width:100%;padding:0.65rem 0.9rem;border-radius:0.65rem;border:1px solid var(--border);background:var(--card);color:var(--text-primary);font-size:0.875rem;outline:none;" id="su-role">
+      <option value="resident">Resident</option><option value="admin">Admin</option><option value="worker">Worker</option>
+    </select>
+    
+    
+  </div>
+    <div id="su-resident-fields" class="grid grid-cols-2" style="gap:12px;">
+      <div style="margin-bottom:1rem;">
+    <label style="display:block;font-size:0.875rem;font-weight:500;margin-bottom:0.4rem;">Tower</label>
+    <input class="input" style="width:100%;padding:0.65rem 0.9rem;border-radius:0.65rem;border:1px solid var(--border);background:var(--card);color:var(--text-primary);font-size:0.875rem;outline:none;" id="su-tower" placeholder="A">
+    
+    
+  </div>
+      <div style="margin-bottom:1rem;">
+    <label style="display:block;font-size:0.875rem;font-weight:500;margin-bottom:0.4rem;">Flat Number</label>
+    <input class="input" style="width:100%;padding:0.65rem 0.9rem;border-radius:0.65rem;border:1px solid var(--border);background:var(--card);color:var(--text-primary);font-size:0.875rem;outline:none;" id="su-flat" placeholder="304">
+    
+    
+  </div>
+    </div>
+    <div id="su-worker-fields" class="hidden">
+      <div style="margin-bottom:1rem;">
+    <label style="display:block;font-size:0.875rem;font-weight:500;margin-bottom:0.4rem;">Specialization</label>
+    <select class="input" style="width:100%;padding:0.65rem 0.9rem;border-radius:0.65rem;border:1px solid var(--border);background:var(--card);color:var(--text-primary);font-size:0.875rem;outline:none;" id="su-spec">
+        <option>Electrician</option><option>Plumber</option><option>Carpenter</option><option>Cleaner</option><option>Lift Technician</option>
+      </select>
+    
+    
+  </div>
+    </div>
+    <div style="margin-bottom:1rem;">
+    <label style="display:block;font-size:0.875rem;font-weight:500;margin-bottom:0.4rem;">Password</label>
+    <div style="position:relative;">
+      <input class="input" style="width:100%;padding:0.65rem 0.9rem;border-radius:0.65rem;border:1px solid var(--border);background:var(--card);color:var(--text-primary);font-size:0.875rem;outline:none;" type="password" id="su-password" placeholder="At least 6 characters">
+      <button type="button" data-action="toggle-pw" data-target="su-password" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);color:var(--muted);"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;pointer-events:none;"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></button>
+    </div>
+    
+    <p id="err-su-password" class="field-error" style="font-size:0.75rem;margin-top:0.3rem;color:var(--error);display:none;"></p>
+  </div>
+    <div style="margin-bottom:1rem;">
+    <label style="display:block;font-size:0.875rem;font-weight:500;margin-bottom:0.4rem;">Confirm Password</label>
+    <input class="input" style="width:100%;padding:0.65rem 0.9rem;border-radius:0.65rem;border:1px solid var(--border);background:var(--card);color:var(--text-primary);font-size:0.875rem;outline:none;" type="password" id="su-confirm" placeholder="Re-enter your password">
+    
+    <p id="err-su-confirm" class="field-error" style="font-size:0.75rem;margin-top:0.3rem;color:var(--error);display:none;"></p>
+  </div>
+    <button class="btn focus-ring" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:0.65rem;font-weight:500;border:none;cursor:pointer;padding:0.75rem 1.5rem;font-size:1rem;background:var(--primary);color:#fff;" type="submit" style="width:100%;margin-top:0.25rem;">Create Account</button>
+    <p style="font-size:0.875rem;text-align:center;margin-top:1.25rem;color:var(--text-secondary);">Already have an account? <a href="login.html" style="font-weight:500;color:var(--primary);">Login</a></p>
+    <p style="font-size:0.75rem;text-align:center;margin-top:1rem;color:var(--muted);">This is a demo project &mdash; passwords are stored in your browser only, not on a secure server.</p>
+  </form>
+        
+      </div>
+    </div>
+  </div>
+<div id="toast-root" style="position:fixed;bottom:20px;right:20px;z-index:100;max-width:90vw;"></div>
+<script src="shared.js"></script>
+<script src="signup.js"></script>
+</body>
+</html>

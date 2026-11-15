@@ -298,7 +298,7 @@ export default function Landing() {
         <div className="section-inner-narrow">
           <div className="problem-split">
             <div className="problem-photo-stack">
-              <img src="https://picsum.photos/seed/resicare-building2/500/500" alt="Residential apartment building" loading="lazy" />
+              <img src="/images/8.jpg" alt="Residential apartment building" loading="lazy" />
               <img src="/images/9.jpg" alt="Maintenance technician at work" loading="lazy" />
             </div>
             <div>

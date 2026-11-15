@@ -6,7 +6,7 @@ export default function AuthLayout({ children }) {
     <div className="auth-grid">
       <div className="auth-side">
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 8, textDecoration: 'none' }}>
+          <Link to="/images/9.jpg" style={{ display: 'flex', alignItems: 'center', gap: 8, textDecoration: 'none' }}>
             <div className="brand-mark" style={{ background: 'rgba(255,255,255,0.15)' }}>R</div>
             <span className="font-display font-extrabold text-lg" style={{ color: '#fff' }}>ResiCare</span>
           </Link>
